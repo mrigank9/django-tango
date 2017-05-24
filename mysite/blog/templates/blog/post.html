@@ -1,0 +1,10 @@
+{% extends "personal/header.html" %}
+{% block content %}
+    <h3>{{post.title}}</h3>
+    <h6>on {{post.date}}</h6>
+    {{post.body|safe|linebreaks}}
+{% endblock %}
+
+<!--safe filtershmtl content that you put in your blog. i.e. while entering matter into the post if you write in <h.>...</h.> form; safe
+will prevent the html tags from appearing in the final render altogether-->
+<!-- linebreaks allows line breaks in the final render corresponding to line breaks in the source text -->
